@@ -1,4 +1,4 @@
-package com.pdfreader.business;
+package com.training.service;
 
 import java.util.List;
 import java.util.Scanner;
