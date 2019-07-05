@@ -4,7 +4,8 @@ import java.sql.*;
 import java.util.List;
 import java.util.Properties;
 
-import com.pdfreader.business.InvoiceAddress;
+import com.pdfreader.constants.InvoiceAddress;
+
 
 @SuppressWarnings("unused")
 public class InvoiceAddressDB {

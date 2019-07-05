@@ -20,8 +20,6 @@ public class DBConnection {
 			connectionProps.put("password", password);
 			conn = DriverManager.getConnection(url, connectionProps);
 
-			System.out.println("Database connections successful");
-
 			return conn;
 
 		} catch (SQLException e) {

@@ -17,6 +17,8 @@ import javax.mail.Store;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 
+import com.pdfreader.constants.InvoiceAddress;
+import com.pdfreader.constants.InvoiceData;
 import com.pdfreader.dataaccess.InvoiceAddressDB;
 import com.pdfreader.dataaccess.InvoiceDataDB;
 

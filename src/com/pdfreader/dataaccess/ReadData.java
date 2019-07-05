@@ -21,7 +21,6 @@ public class ReadData {
 				String arr[] = { rs1.getString(1), rs1.getString(2), rs1.getString(3), rs1.getString(4),
 						rs1.getString(5), rs1.getString(6), rs1.getString(7), rs1.getString(8) };
 				totalData.add(arr);
-				// System.out.println(rs1.getString(1)+"\t"+rs1.getString(2)+"\t"+rs1.getString(3)+"\t"+rs1.getString(4)+"\t"+rs1.getString(5)+"\t"+rs1.getString(6)+"\t"+rs1.getString(7));
 			}
 		
 		} catch (SQLException e) {

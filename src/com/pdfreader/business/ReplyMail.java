@@ -28,7 +28,7 @@ public class ReplyMail implements InvoiceApprove {
 		try {
 			flag=readData.invoiceApproval(invoiceNO);
 			if(flag)
-				content="\n\nCongratulations, we are processing your Invoice :  ";
+				content="\n\nCongratulations, your Invoice is Approved :  ";
 			else
 			content="\n\nPlease enter a valid Invoice Number, The Invoice number you entered is:";
 			

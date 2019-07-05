@@ -38,17 +38,45 @@ public class InvoiceReader {
 
 			List<String[]> dataArr = pdfreader.showData();
 
-			System.out.println(dataArr);
-
+			
 			for (String[] eachArr : dataArr) {
-
-				System.out.println("-------------------------------------------------------------------");
-
-				for (String eachValue : eachArr) {
-
-					System.out.println(eachValue);
+				System.out.println("-----------------------------------------------------------");
+				for(int eachValue=0;eachValue<eachArr.length;eachValue++){
+					
+				
+					if(eachValue==0){
+						if(eachArr[eachValue]=="1")
+						System.out.println("Approval Status: "+"Approved\n");
+						else
+							System.out.println("Approval Status: "+"Not Approved\n");
+					}
+					else if(eachValue==1){
+						System.out.println("Invoice Number: "+eachArr[eachValue]);
+		
+					}
+					else if(eachValue==2){
+						System.out.println("Invoice Amount: "+eachArr[eachValue]);
+					}
+					else if(eachValue==3){
+						System.out.println("\nDate : "+eachArr[eachValue]);
+					}
+					else if(eachValue==4){
+						System.out.println("Customer PO: "+eachArr[eachValue]);
+					}
+					else if(eachValue==5){
+						System.out.println("Sold To:\n "+eachArr[eachValue]);
+					}
+					else if(eachValue==6){
+						System.out.println("Ship To: \n "+eachArr[eachValue]);
+					}
+					else{
+						System.out.println("Remit To:\n "+eachArr[eachValue]);
+					}
+					
 				}
+				
 			}
+			
 
 			break;
 		}

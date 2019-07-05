@@ -5,8 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-import com.pdfreader.business.InvoiceData;
-
+import  com.pdfreader.constants.*;
 @SuppressWarnings("unused")
 public class InvoiceDataDB {
 

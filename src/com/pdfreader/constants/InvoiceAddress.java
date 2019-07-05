@@ -1,10 +1,10 @@
-package com.pdfreader.business;
+package com.pdfreader.constants;
 
 public class InvoiceAddress {
-	String soldTo;
-	String shiftTo;
-	String remitTo;
-	String invoiceNum;
+	private String soldTo;
+	private String shiftTo;
+	private String remitTo;
+	private String invoiceNum;
 
 	public InvoiceAddress(String soldTo, String shiftTo, String remitTo, String invoiceNum) {
 		this.shiftTo = shiftTo;

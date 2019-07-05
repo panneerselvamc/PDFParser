@@ -1,10 +1,10 @@
-package com.pdfreader.business;
+package com.pdfreader.constants;
 
 public class InvoiceData {
-	String customerPO;
-	String amount;
-	String invoiceNum;
-	String invoiceDate;
+	private String customerPO;
+	private String amount;
+	private String invoiceNum;
+	private String invoiceDate;
 
 	public InvoiceData(String invoiceDate, String customerPO, String amount, String invoiceNum) {
 		this.amount = amount;
