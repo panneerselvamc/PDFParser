@@ -17,7 +17,7 @@ interface InvoiceApprove {
 	public void sendMail(String invoiceNO, String EMAIL_FROM);
 }
 
-public class ReplyMail implements InvoiceApprove {
+public class ReplyEmail implements InvoiceApprove {
 	static boolean flag;
 	static String content;;
 	

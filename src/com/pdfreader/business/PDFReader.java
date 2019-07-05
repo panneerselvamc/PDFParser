@@ -34,8 +34,8 @@ public class PDFReader implements Email, PrintData {
 
 	public void replyMail(String invoiceNO) {
 
-		ReplyMail replyemail = new ReplyMail();
-		replyemail.sendMail(invoiceNO, EMAIL_FROM);
+		ReplyEmail replyEmail = new ReplyEmail();
+		replyEmail.sendMail(invoiceNO, EMAIL_FROM);
 
 	}
 
