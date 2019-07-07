@@ -18,10 +18,11 @@ interface InvoiceApprove {
 }
 
 public class ReplyEmail implements InvoiceApprove {
-	static boolean flag;
-	static String content;;
+	
 	
 	public void sendMail(String invoiceNO, String EMAIL_FROM) {
+		 boolean flag;
+		 String content="";
 		
 		ReadData readData = new ReadData();
 		

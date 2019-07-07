@@ -16,6 +16,7 @@ public class InvoiceAddressDB {
 		for (InvoiceAddress obj : tempList) {
 			Connection conn = DBConnection.getConnection();
 			String sqlQuery = "INSERT INTO INVOICE (SOLDTO,SHIPTO,REMITTO,INVOICENUM) VALUES (?,?,?,?) ";
+			
 			try {
 				PreparedStatement statement = conn.prepareStatement(sqlQuery);
 				statement.setString(1, obj.getSoldTo());
@@ -36,6 +37,7 @@ public class InvoiceAddressDB {
 			finally{
 				try {
 					conn.close();
+					
 				} catch (SQLException e) {
 					e.printStackTrace();
 				}

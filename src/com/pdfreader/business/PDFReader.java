@@ -5,7 +5,7 @@ import com.pdfreader.dataaccess.ReadData;
 import java.util.List;
 
 interface Email {
-	public boolean PDFParse();
+	public String PDFParse();
 }
 
 interface PrintData {
@@ -14,13 +14,13 @@ interface PrintData {
 
 public class PDFReader implements Email, PrintData {
 
-	String pop3Host = "pop.gmail.com";
-	String mailStoreType = "pop3";
+	final static String pop3Host = "pop.gmail.com";
+	final static String mailStoreType = "pop3";
 	final String userName = "myprojectjdbc@gmail.com";
 	final String password = "jdbc1234";
-	static String EMAIL_FROM = "";
+	 String EMAIL_FROM = "";
 
-	public boolean PDFParse() {
+	public String PDFParse() {
 
 		ReceiveEmail receiveEmail = new ReceiveEmail();
 		try {
@@ -29,13 +29,17 @@ public class PDFReader implements Email, PrintData {
 			System.out.println("Unable to process" + e);
 		}
 
-		return !EMAIL_FROM.isEmpty();
+		if (!EMAIL_FROM.isEmpty()) {
+			return EMAIL_FROM;
+		} else {
+			return "";
+		}
 	}
 
-	public void replyMail(String invoiceNO) {
+	public void replyMail(String invoiceNO,String emailFrom) {
 
 		ReplyEmail replyEmail = new ReplyEmail();
-		replyEmail.sendMail(invoiceNO, EMAIL_FROM);
+		replyEmail.sendMail(invoiceNO, emailFrom);
 
 	}
 

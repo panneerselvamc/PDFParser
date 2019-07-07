@@ -44,6 +44,7 @@ public class ReadData {
 			Statement statement = conn.createStatement();
 			int val = statement
 					.executeUpdate("UPDATE INVOICEDATA SET ISAPPROVED = 1 WHERE INVOICENUM = " + invoiceNO);
+		
 			if(val>0)
 				flag=true;
 			else{

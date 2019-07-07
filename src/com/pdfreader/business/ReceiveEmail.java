@@ -23,8 +23,8 @@ import com.pdfreader.dataaccess.InvoiceAddressDB;
 import com.pdfreader.dataaccess.InvoiceDataDB;
 
 public class ReceiveEmail {
-	static String FILE_NAME;
-	static String EMAIL_FROM = "";
+	 String FILE_NAME;
+	 String EMAIL_FROM = "";
 
 	public String receiveEmail(String pop3Host, String mailStoreType, String userName, String password)
 			throws Exception {
@@ -75,7 +75,7 @@ public class ReceiveEmail {
 					InputStream stream = (InputStream) bodyPart.getInputStream();
 					File targetFile = new File("c:\\users\\pselvam6400\\pdf\\" + bodyPart.getFileName());
 					java.nio.file.Files.copy(stream, targetFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
-					PDFDataProcess();
+					PDFDataProcess(FILE_NAME);
 
 				}
 			}
@@ -85,7 +85,7 @@ public class ReceiveEmail {
 		return EMAIL_FROM;
 	}
 
-	public static void PDFDataProcess() throws Exception {
+	public static void PDFDataProcess(String FILE_NAME) throws Exception {
 		ArrayList<InvoiceData> invoiceDataList = new ArrayList<>();
 		ArrayList<InvoiceAddress> invoiceAddressList = new ArrayList<>();
 
